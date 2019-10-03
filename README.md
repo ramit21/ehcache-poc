@@ -30,7 +30,13 @@ Hit below url and see the DB hit happening in the logs. hit the url again, no lo
 http://localhost:8080/rest/search/Ramit
 ```
 
+hit the below url to clear the user cache
+```
+http://localhost:8080/rest/reset
+```
+
 P.S. Note the use of Lombok plugin and its annotations in Users datamodel that makes code less verbose. Do ensure to install
 lombok plugin in IDE: https://www.journaldev.com/18124/java-project-lombok
+
 
 
