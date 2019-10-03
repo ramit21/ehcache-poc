@@ -11,15 +11,22 @@ import com.ramit.ehcache.cache.UsersCache;
 import com.ramit.ehcache.model.Users;
 
 @Controller
-@RequestMapping(value="/rest/search")
+@RequestMapping(value="/rest")
 public class UserController {
 	
 	@Autowired
 	UsersCache usersCache;
 	
-	@GetMapping(value = "/{name}")
+	@GetMapping(value = "/search/{name}")
 	@ResponseBody
 	public Users getUser(@PathVariable final String name) {
 		return usersCache.getUser(name);
+	}
+	
+	@GetMapping(value = "/reset")
+	@ResponseBody
+	public String resetUserCache() {
+		 usersCache.reset();
+		 return "Cache reset";
 	}
 }
