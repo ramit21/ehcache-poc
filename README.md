@@ -35,6 +35,12 @@ hit the below url to clear the user cache
 http://localhost:8080/rest/reset
 ```
 
+Ehcache, can be used in cache aside pattern, or in read through, write through, write behind petterns as well:
+```
+http://www.ehcache.org/documentation/3.4/caching-patterns.html
+```
+
+
 P.S. Note the use of Lombok plugin and its annotations in Users datamodel that makes code less verbose. Do ensure to install
 lombok plugin in IDE: https://www.journaldev.com/18124/java-project-lombok
 
